@@ -14,7 +14,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer(Duration(seconds: 5), () => Navigator.pushReplacementNamed(context,'onboarding_screen'));
+    Timer(Duration(seconds: 5), () => Navigator.pushReplacementNamed(context,'/onboarding_screen'));
 
   }
   @override

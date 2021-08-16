@@ -18,8 +18,6 @@ class _OnboardingScreenViewState extends State<OnboardingScreenView> {
     const pageDecoration = const PageDecoration(
         titleTextStyle: TextStyle(fontSize: 28.0, fontWeight: FontWeight.w700),
         bodyTextStyle: bodyStyle,
-     // descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-     //  pageColor: Colors.white,
       imagePadding: EdgeInsets.zero,
       imageFlex: 4
     );
@@ -63,7 +61,7 @@ class _OnboardingScreenViewState extends State<OnboardingScreenView> {
               ),
             ),
           ),
-          onDone: (){},
+          onDone: (){Navigator.pushNamed(context, '/auth/login_screen');},
           showSkipButton: true,
           skip: Container(
             width: 70,
@@ -82,7 +80,9 @@ class _OnboardingScreenViewState extends State<OnboardingScreenView> {
               ),
             ),
           ),
-          onSkip: () {},
+          onSkip: () {
+            Navigator.pushNamed(context, '/auth/login_screen');
+          },
           next: Icon(Icons.arrow_forward),
           dotsDecorator: getDotDecoration(),
           onChange: (index) => print('Page $index selected'),
@@ -115,15 +115,4 @@ class _OnboardingScreenViewState extends State<OnboardingScreenView> {
       borderRadius: BorderRadius.circular(24),
     ),
   );
-
-  // PageDecoration getPageDecoration() => PageDecoration(
-  //   titleTextStyle: TextStyle(
-  //       fontSize: 28,
-  //       fontWeight: FontWeight.w400
-  //   ),
-  //   bodyTextStyle: TextStyle(fontSize: 20),
-  //   descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
-  //   imagePadding: EdgeInsets.all(24),
-  //   pageColor: Colors.white,
-  // );
 }
