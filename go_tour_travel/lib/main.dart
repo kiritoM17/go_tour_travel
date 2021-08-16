@@ -3,6 +3,7 @@ import 'package:go_tour_travel/ui/views/authentification/login_screen.dart';
 import 'package:go_tour_travel/ui/views/authentification/singup_screen.dart';
 import 'package:go_tour_travel/ui/views/home_screen.dart';
 import 'package:go_tour_travel/ui/views/onboarding/onboarding_screen.dart';
+import 'package:go_tour_travel/ui/views/terms/terms_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/splash_screen' : (BuildContext context) => new SplashScreenView(),
         '/onboarding_screen' : (BuildContext context) => new OnboardingScreenView(),
         '/auth/login_screen' : (BuildContext context) => new LoginScreenView(),
-        '/auth/signup_screen' : (BuildContext context) => new SingUpScreenView()
+        '/auth/signup_screen' : (BuildContext context) => new SingUpScreenView(),
+        '/terms_policy' : (BuildContext context) => new TermScreenView(),
       },
     );
   }
