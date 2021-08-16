@@ -148,7 +148,9 @@ class _LoginScreenViewState extends State<LoginScreenView> {
             ),
             Center(
               child: GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.pushNamed(context, '/auth/signup_screen');
+                },
                 child: Text(
                   'Sign Up Here',
                   style: TextStyle(
